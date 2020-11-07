@@ -18,6 +18,8 @@ public class Student
     // the amount of credits for study taken so far
     private int credits;
     
+   
+    
     /**
      * Create a new student with a given name and ID number.
      */
@@ -25,9 +27,11 @@ public class Student
     {
         name = fullName;
         id = studentID;
+        
         credits = 0;
     }
-
+    
+    
     /**
      * Return the full name of this student.
      */
@@ -86,4 +90,8 @@ public class Student
     {
         System.out.println(name + ", student ID: " + id + ", credits: " + credits);
     }
+    
+  
+
 }
+
