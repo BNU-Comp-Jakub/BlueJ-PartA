@@ -6,6 +6,8 @@ import java.util.*;
  * 
  * @author Michael Kölling and David Barnes
  * @version 2016.02.29
+ * modified by Jakub Szupryczynski
+ * dated 07/11/2020
  */
 public class Student
 {
