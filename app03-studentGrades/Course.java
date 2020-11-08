@@ -126,10 +126,7 @@ public class Course
     }
     
     
-    public int result()
-    {
-        coding.precentagemark + coding.precentagemark + coding.precentagemark +
-    }
+   
     
 }
 
