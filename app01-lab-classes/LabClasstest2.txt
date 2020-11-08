@@ -1,0 +1,9 @@
+LabClass labClass1 = new LabClass(3);
+labClass1.setInstructor("Derek");
+labClass1.setRoom("301");
+labClass1.setTime("Tuesday 9th of November");
+labClass1.printList();
+Lab class Tuesday 9th of November
+Instructor: Derek   Room: 301
+Class list:
+Number of students: 0
