@@ -1,0 +1,10 @@
+Student student1 = new Student("Jakub", "411");
+Course course1 = new Course("coding", "555");
+student1.print();
+Jakub, student ID: 411, credits: 0
+    Exception occurred.
+student1.addtocourse(course1);
+student1.print();
+Jakub, student ID: 411, credits: 0
+coding
+555

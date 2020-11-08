@@ -9,26 +9,43 @@ import java.util.*;
 public class Course
 {
     // Variable for the name of the course
-    private String coursename;
+    public String coursename;
     // Variable that represent the code number of the course
-    private String codenumber;
+    public String codenumber;
     
     
     /**
      * Store a name of the course and the code number of the course.
      */
-    public Course()
+    public Course(String course, String code)
     {
         // initialise instance variables
-        coursename = "Programing";
-        codenumber = "D5001";
+        coursename = course;
+        codenumber = code;
         
         
         
         
     }
     
+    
+    
+    /**
+     * Set a new name for this Course.
+     */
+    public void changeName(String replacementName)
+    {
+        coursename = replacementName;
+    }
 
+     /**
+     * Set a new code for this Course.
+     */
+    public void changeCode(String replacementCode)
+    {
+        codenumber = replacementCode;
+    }
+    
     /**
     Get tge name of the course and the number of the course.
     */
