@@ -12,15 +12,16 @@ public class Module
     //The code of the module
     public String modulecode;
     
-    public String precentagemark;
+    public int mark;
 
     /**
      * Constructor for objects of class Module
      */
-    public Module(String name,String code)
+    public Module(String name,String code,int precentage)
     {
         modulename = name;
         modulecode = code;
+        mark = precentage;
     }
 
     /**
@@ -41,41 +42,15 @@ public class Module
         
     }
     
-      /**
-     *Gets the precentages and turns them into grades
+    /**
+     *Gets the percentage of the moudle
      */
-    public void precentagemark(int precentage)
+    public int getpercent()
     {
-        if(precentage >= 0 && precentage <= 39)
-        {
-         System.out.println("F");
-        }
-        else if(precentage >= 40 && precentage <= 49)
-        {
-         System.out.println("D");
-        }
+        return mark;
         
-        else if(precentage >= 50 && precentage <= 59)
-        {
-         System.out.println("C");
-        }
-        
-        else if(precentage >= 60 && precentage <= 69)
-        {
-         System.out.println("B");
-        }
-        
-        else if(precentage >= 70 && precentage <= 100)
-        {
-         System.out.println("A");
-        }
-        
-        else
-        {
-         System.out.println("Please enter a correct precentage");
-        }
     }
-    
+   
       /**
      * Sets a new name for this module.
      */

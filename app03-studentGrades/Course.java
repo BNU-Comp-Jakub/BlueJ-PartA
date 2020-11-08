@@ -20,6 +20,8 @@ public class Course
     private Module coding3;
        
     private Module coding4;
+    
+    int precentage;
      /**
      * Allows for the Module to be assigned to the Course
      */
@@ -123,10 +125,47 @@ public class Course
         System.out.println("3rd Module's code is " + coding3.modulecode);
         System.out.println("4th Module's name is " + coding4.modulename);
         System.out.println("4th Module's code is " + coding4.modulecode);
+       
     }
     
+    /**
+     *Gets the precentages and turns them into grades
+     */
+    public void precentagemark(int precentage)
     
-   
+    {
+       
+        
+        if(precentage >= 0 && precentage <= 39)
+        {
+         System.out.println("F");
+        }
+        else if(precentage >= 40 && precentage <= 49)
+        {
+         System.out.println("D");
+        }
+        
+        else if(precentage >= 50 && precentage <= 59)
+        {
+         System.out.println("C");
+        }
+        
+        else if(precentage >= 60 && precentage <= 69)
+        {
+         System.out.println("B");
+        }
+        
+        else if(precentage >= 70 && precentage <= 100)
+        {
+         System.out.println("A");
+        }
+        
+        else
+        {
+         System.out.println("Please enter a correct precentage");
+        }
+    }
+    
     
 }
 
