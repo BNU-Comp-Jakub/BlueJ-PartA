@@ -1,0 +1,102 @@
+TicketMachine ticketMa1 = new TicketMachine();
+ticketMa1.insertMoney(0.10);
+You inserted0.1 cents.
+You now have0.1 cents.
+ticketMa1.getPriceAmersham()
+    returned double 3.0
+ticketMa1.printTicketAmersham();
+You must insert at least: 2.9 more cents.
+ticketMa1.printTicketAylesbury();
+You must insert at least: 2.1 more cents.
+ticketMa1.printTicketHighWycombe();
+You must insert at least: 3.1999999999999997 more cents.
+ticketMa1.printTicketAll();
+You must insert at least: 8.4 more cents.
+ticketMa1.insertMoney(2.00);
+You inserted2.0 cents.
+You now have2.1 cents.
+ticketMa1.insertMoney(2.00);
+You inserted2.0 cents.
+You now have4.1 cents.
+ticketMa1.insertMoney(2.00);
+You inserted2.0 cents.
+You now have6.1 cents.
+ticketMa1.insertMoney(2.00);
+You inserted2.0 cents.
+You now have8.1 cents.
+ticketMa1.insertMoney(2.00);
+You inserted2.0 cents.
+You now have10.1 cents.
+ticketMa1.printTicketAmersham();
+##################
+# The BlueJ Line
+# 08/11/20
+# Ticket to Amersham
+# 3.0 cents.
+##################
+
+ticketMa1.getBalance()
+    returned double 7.1
+ticketMa1.printTicketAylesbury();
+##################
+# The BlueJ Line
+# 08/11/20
+# Ticket to Aylesbury
+# 2.2 cents.
+##################
+
+ticketMa1.getBalance()
+    returned double 4.8999999999999995
+ticketMa1.printTicketHighWycombe();
+##################
+# The BlueJ Line
+# 08/11/20
+# Ticket to High Wycombe
+# 3.3 cents.
+##################
+
+ticketMa1.getBalance()
+    returned double 1.5999999999999996
+ticketMa1.refundBalance()
+    returned double 1.5999999999999996
+ticketMa1.insertMoney(2.00);
+You inserted2.0 cents.
+You now have2.0 cents.
+ticketMa1.insertMoney(2.00);
+You inserted2.0 cents.
+You now have4.0 cents.
+ticketMa1.insertMoney(2.00);
+You inserted2.0 cents.
+You now have6.0 cents.
+ticketMa1.insertMoney(2.00);
+You inserted2.0 cents.
+You now have8.0 cents.
+ticketMa1.insertMoney(2.00);
+You inserted2.0 cents.
+You now have10.0 cents.
+ticketMa1.printTicketAll();
+##################
+# The BlueJ Line
+# 08/11/20
+# Ticket to High Wycombe
+# 3.3 cents.
+##################
+
+##################
+# The BlueJ Line
+# 08/11/20
+# Ticket to Amersham
+# 3.0 cents.
+##################
+
+##################
+# The BlueJ Line
+# 08/11/20
+# Ticket to Aylesbury
+# 2.2 cents.
+##################
+
+ticketMa1.getBalance()
+    returned double 1.5
+ticketMa1.refundBalance()
+    returned double 1.5
