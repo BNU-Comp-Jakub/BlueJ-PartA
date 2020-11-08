@@ -89,18 +89,44 @@ public class TicketMachine
     /**
      * Receive an amount of money from a customer.
      * Check that the amount is sensible.
+     * Display the balance
+     * Limit the customer to only certain amounts of money
+     * Display the amount inserted
      */
     public void insertMoney(double amount)
     {
-        if(amount > 0) 
+        if(amount == 0.10) 
         {
             balance = balance + amount;
+            System.out.println("You inserted" + amount + " cents.");
+            System.out.println("You now have" + balance + " cents.");
         }
-        else 
+        else if(amount == 0.20) 
         {
-            System.out.println("Use a positive amount rather than: " +
+            balance = balance + amount;
+            System.out.println("You inserted" + amount + " cents.");
+            System.out.println("You now have" + balance + " cents.");
+        }
+         else if(amount == 1.00) 
+        {
+            balance = balance + amount;
+            System.out.println("You inserted" + amount + " cents.");
+            System.out.println("You now have" + balance + " cents.");
+        }
+         else if(amount == 2.00) 
+        {
+            balance = balance + amount;
+            System.out.println("You inserted" + amount + " cents.");
+            System.out.println("You now have" + balance + " cents.");
+        }
+        else
+        {
+            System.out.println("Plase enter either 10p,20p,£1 or £2 rather than: " +
                                amount);
         }
+         
+            
+            
     }
 
     /**
