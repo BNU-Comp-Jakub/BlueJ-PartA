@@ -67,4 +67,8 @@ public class Module
         modulecode = replacementCode;
     }
    
+    public void print()
+    {
+      System.out.println("Name of the moudle: " + modulename + "Code of the moudle" + modulecode + mark);
+    }
 }

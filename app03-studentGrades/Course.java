@@ -128,10 +128,15 @@ public class Course
        
     }
     
+    public void calculatefinalmark()
+    {
+        //set the precentage = to the 4 module mark and divided by 4.
+    }
+    
     /**
      *Gets the precentages and turns them into grades
      */
-    public void precentagemark(int precentage)
+    public void grade(int precentage)
     
     {
        

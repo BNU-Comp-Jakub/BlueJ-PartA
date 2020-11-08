@@ -20,61 +20,27 @@ public class TicketMachine
     // The total amount of money collected by this machine.
     private double total;
     // price for ticket to Aylesbury
-    private double priceAylesbury;
-    // price for ticket to Amersham
-    private double priceAmersham;
-    // price for ticket to High Wycombe
-    private double priceHighWycombe;
+    private Ticket aylesburyTicket;
     
-    private double priceAll;
+    private Ticket amershamTicket;
+    
+    private Ticket wycombeTicket;
+    
+    private Ticket userTicket;
 
     /**
      * Create a machine that issues tickets of the given price.
      */
     public TicketMachine()
     {
-        priceAylesbury = 2.20;
-        priceAmersham = 3.00;
-        priceHighWycombe = 3.30;
-        priceAll = 8.50;
+        aylesburyTicket = new Ticket("Aylesbury",2.00);
+        
+        amershamTicket = new Ticket("Amersham",3.00);
+        
+        wycombeTicket = new Ticket("High Wycombe",3.30);
+        
         balance = 0;
         total = 0;
-    }
-
-    /**
-     * @Return The price of a ticket.
-     */
-    public double getPriceAylesbury()
-    {
-        return priceAylesbury;
-        
-    }
-
-    /**
-     * @Return The price of a ticket.
-     */
-    public double getPriceAmersham()
-    {
-        return priceAmersham;
-        
-    }
-    
-    /**
-     * @Return The price of a ticket.
-     */
-    public double getPriceHighWycombe()
-    {
-        return priceHighWycombe;
-        
-    }
-    
-     /**
-     * @Return The price of a ticket.
-     */
-    public double getPriceAll()
-    {
-        return priceAll;
-        
     }
     
     /**
@@ -103,9 +69,6 @@ public class TicketMachine
         }
         else if(amount == 0.20) 
         {
-            balance = balance + amount;
-            System.out.println("You inserted" + amount + " cents.");
-            System.out.println("You now have" + balance + " cents.");
         }
          else if(amount == 1.00) 
         {
@@ -129,145 +92,51 @@ public class TicketMachine
             
     }
 
+    public void insert20p()
+    {
+        double amount = 0.20;
+        balance = balance + amount;
+        System.out.println("You inserted" + amount + " cents.");
+        System.out.println("You now have" + balance + " cents.");
+    }
+    
+    public void selectAylesbury()
+    {
+        userTicket = aylesburyTicket;
+    }
+    
     /**
      * Print a ticket if enough money has been inserted, and
      * reduce the current balance by the ticket price. Print
      * an error message if more money is required.
      */
-    public void printTicketAylesbury()
+    public void printTicket()
     {
-        if(balance >= priceAylesbury) 
+        
+        if(balance >= userTicket.getPrice()) 
         {
             // Simulate the printing of a ticket.
             System.out.println("##################");
             System.out.println("# The BlueJ Line");
             System.out.println("# 08/11/20");
-            System.out.println("# Ticket to Aylesbury");
-            System.out.println("# " + priceAylesbury + " cents.");
+            System.out.print("# "); userTicket.print();
             System.out.println("##################");
             System.out.println();
 
             // Update the total collected with the price.
-            total = total + priceAylesbury;
+            total = total + userTicket.getPrice();
             // Reduce the balance by the price.
-            balance = balance - priceAylesbury;
+            balance = balance - userTicket.getPrice();
         }
         else 
         {
             System.out.println("You must insert at least: " +
-                               (priceAylesbury - balance) + " more cents.");
+                               (userTicket.getPrice() - balance) + " more cents.");
                     
         }
     }
 
-     /**
-     * Print a ticket if enough money has been inserted, and
-     * reduce the current balance by the ticket price. Print
-     * an error message if more money is required.
-     */
-    public void printTicketAmersham()
-    {
-        if(balance >= priceAmersham) 
-        {
-            // Simulate the printing of a ticket.
-            System.out.println("##################");
-            System.out.println("# The BlueJ Line");
-            System.out.println("# 08/11/20");
-            System.out.println("# Ticket to Amersham");
-            System.out.println("# " + priceAmersham + " cents.");
-            System.out.println("##################");
-            System.out.println();
 
-            // Update the total collected with the price.
-            total = total + priceAmersham;
-            // Reduce the balance by the price.
-            balance = balance - priceAmersham;
-        }
-        else 
-        {
-            System.out.println("You must insert at least: " +
-                               (priceAmersham - balance) + " more cents.");
-                    
-        }
-    }
-   
-     /**
-     * Print all tickets if enough money has been inserted, and
-     * reduce the current balance by the ticket price. Print
-     * an error message if more money is required.
-     */
-    public void printTicketAll()
-    {
-        if(balance >= priceAll) 
-        {
-            // Simulate the printing of a ticket.
-            System.out.println("##################");
-            System.out.println("# The BlueJ Line");
-            System.out.println("# 08/11/20");
-            System.out.println("# Ticket to High Wycombe");
-            System.out.println("# " + priceHighWycombe + " cents.");
-            System.out.println("##################");
-            System.out.println();
-            
-            System.out.println("##################");
-            System.out.println("# The BlueJ Line");
-            System.out.println("# 08/11/20");
-            System.out.println("# Ticket to Amersham");
-            System.out.println("# " + priceAmersham + " cents.");
-            System.out.println("##################");
-            System.out.println();
-            
-            System.out.println("##################");
-            System.out.println("# The BlueJ Line");
-            System.out.println("# 08/11/20");
-            System.out.println("# Ticket to Aylesbury");
-            System.out.println("# " + priceAylesbury + " cents.");
-            System.out.println("##################");
-            System.out.println();
-
-            // Update the total collected with the price.
-            total = total + priceAll;
-            // Reduce the balance by the price.
-            balance = balance - priceAll;
-        }
-        else 
-        {
-            System.out.println("You must insert at least: " +
-                               (priceAll - balance) + " more cents.");
-                    
-        }
-    }
-    
-     /**
-     * Print a ticket if enough money has been inserted, and
-     * reduce the current balance by the ticket price. Print
-     * an error message if more money is required.
-     */
-    public void printTicketHighWycombe()
-    {
-        if(balance >= priceHighWycombe) 
-        {
-            // Simulate the printing of a ticket.
-            System.out.println("##################");
-            System.out.println("# The BlueJ Line");
-            System.out.println("# 08/11/20");
-            System.out.println("# Ticket to High Wycombe");
-            System.out.println("# " + priceHighWycombe + " cents.");
-            System.out.println("##################");
-            System.out.println();
-
-            // Update the total collected with the price.
-            total = total + priceHighWycombe;
-            // Reduce the balance by the price.
-            balance = balance - priceHighWycombe;
-        }
-        else 
-        {
-            System.out.println("You must insert at least: " +
-                               (priceHighWycombe - balance) + " more cents.");
-                    
-        }
-    }
     
     /**
      * Return the money in the balance.
