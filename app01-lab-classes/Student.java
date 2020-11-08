@@ -17,12 +17,12 @@ public class Student
     private String id;
     // the amount of credits for study taken so far
     private int credits;
-    
+    // Connection between two classes
     private Course programing;
     
     
     /**
-     * 
+     * Allows for the course to be assigned to the student
      */
     public void addtocourse(Course course1)
     {
@@ -96,6 +96,7 @@ public class Student
     
     /**
      * Print the student's name and ID number to the output terminal.
+     * Also the course and it's number us shown here.
      */
     public void print()
     {

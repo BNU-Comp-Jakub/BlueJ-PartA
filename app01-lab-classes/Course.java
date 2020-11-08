@@ -47,7 +47,7 @@ public class Course
     }
     
     /**
-    Get tge name of the course and the number of the course.
+    *Get the name of the course.
     */
     public String getName()
     {
@@ -55,6 +55,9 @@ public class Course
 
     }
     
+    /**
+    * Get the code of the course.
+    */
     public String getCode()
     {
         return codenumber;
