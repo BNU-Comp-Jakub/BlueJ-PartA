@@ -9,9 +9,9 @@ import java.util.*;
 public class Course
 {
     // Variable for the name of the course
-    public String coursename;
+    private String courseName;
     // Variable that represent the code number of the course
-    public String codenumber;
+    private String codeNumber;
     
     
     /**
@@ -20,12 +20,8 @@ public class Course
     public Course(String course, String code)
     {
         // initialise instance variables
-        coursename = course;
-        codenumber = code;
-        
-        
-        
-        
+        courseName = course;
+        codeNumber = code;
     }
     
     
@@ -33,17 +29,17 @@ public class Course
     /**
      * Set a new name for this Course.
      */
-    public void changeName(String replacementName)
+    public void setName(String replacementName)
     {
-        coursename = replacementName;
+        courseName = replacementName;
     }
 
      /**
      * Set a new code for this Course.
      */
-    public void changeCode(String replacementCode)
+    public void setCode(String replacementCode)
     {
-        codenumber = replacementCode;
+        codeNumber = replacementCode;
     }
     
     /**
@@ -51,8 +47,7 @@ public class Course
     */
     public String getName()
     {
-        return coursename;
-
+        return courseName;
     }
     
     /**
@@ -60,8 +55,11 @@ public class Course
     */
     public String getCode()
     {
-        return codenumber;
+        return codeNumber;
     }
     
-    
-}
+    public void print()
+    {
+       System.out.println("course: " + codeNumber + " " + courseName); 
+    }  // end of print      
+} // END OF CLASS

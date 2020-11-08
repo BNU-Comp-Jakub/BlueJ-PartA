@@ -18,18 +18,7 @@ public class Student
     // the amount of credits for study taken so far
     private int credits;
     // Connection between two classes
-    private Course programing;
-    
-    
-    /**
-     * Allows for the course to be assigned to the student
-     */
-    public void addtocourse(Course course1)
-    {
-        programing = course1;
-      
-        
-    }
+    private Course course;
     
     /**
      * Create a new student with a given name and ID number.
@@ -42,6 +31,13 @@ public class Student
         credits = 0;
     }
     
+    /**
+     * Allows for the course to be assigned to the student
+     */
+    public void addToCourse(Course course1)
+    {
+        course = course1;
+    }
     
     /**
      * Return the full name of this student.
@@ -101,8 +97,8 @@ public class Student
     public void print()
     {
         System.out.println(name + ", student ID: " + id + ", credits: " + credits);
-        System.out.println(programing.coursename);
-        System.out.println(programing.codenumber);
+        System.out.println(course.getName());
+        System.out.println(course.getCode());
     }
     
   
