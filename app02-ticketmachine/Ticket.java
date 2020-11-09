@@ -1,9 +1,9 @@
 import java.util.Date;
 /**
- * Write a description of class Ticket here.
+ * This ticket contains the destination, the date and the price.
  *
- * @author (your name)
- * @version (a version number or a date)
+ * @author (Jakub Szupryczynski)
+ * @version (08/11/2020)
  */
 public class Ticket
 {
@@ -22,14 +22,17 @@ public class Ticket
        this.price = price;
        date = new Date();
     }
-
+    
+    /**
+     * This returns the price of the ticket
+     */
     public double getPrice()
     {
         return price;
     }
     
     /**
-     *
+     * This prints out the destination, code and the date
      */
     public void print()
     {
