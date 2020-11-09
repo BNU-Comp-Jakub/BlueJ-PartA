@@ -100,7 +100,6 @@ public class Course
     public String getName()
     {
         return coursename;
-
     }
     
     /**
@@ -125,12 +124,13 @@ public class Course
         System.out.println("3rd Module's code is " + coding3.modulecode);
         System.out.println("4th Module's name is " + coding4.modulename);
         System.out.println("4th Module's code is " + coding4.modulecode);
-       
     }
     
     public void calculatefinalmark()
     {
         //set the precentage = to the 4 module mark and divided by 4.
+        this.precentage = coding.mark + coding2.mark + coding3.mark + coding4.mark;
+        return precentage;
     }
     
     /**

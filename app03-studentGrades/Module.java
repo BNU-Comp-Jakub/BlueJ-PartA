@@ -69,6 +69,6 @@ public class Module
    
     public void print()
     {
-      System.out.println("Name of the moudle: " + modulename + "Code of the moudle" + modulecode + mark);
+      System.out.println("Name of the moudle: " + modulename + " Code of the moudle" + modulecode + " Mark:" + mark);
     }
 }
