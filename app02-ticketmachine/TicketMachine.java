@@ -1,38 +1,38 @@
-/**
- * TicketMachine models a ticket machine that issues
- * flat-fare tickets.
- * The price of a ticket is specified via the constructor.
- * Instances will check to ensure that a user only enters
- * sensible amounts of money, and will only print a ticket
- * if enough money has been input.
- * 
- * @author David J. Barnes and Michael Kölling
- * @version 2016.02.29
- * 
- * Modified by Jakub Szupryczynski
- * 08/11/2020
- */
-public class TicketMachine
-{
-   
-    // The amount of money entered by a customer so far.
-    private double balance;
-    // The total amount of money collected by this machine.
-    private double total;
-    // price for ticket to Aylesbury
-    private Ticket aylesburyTicket;
-    
-    private Ticket amershamTicket;
-    
-    private Ticket wycombeTicket;
-    
-    private Ticket userTicket;
-
     /**
-     * Create a machine that issues tickets of the given price.
+     * TicketMachine models a ticket machine that issues
+     * flat-fare tickets.
+     * The price of a ticket is specified via the constructor.
+     * Instances will check to ensure that a user only enters
+     * sensible amounts of money, and will only print a ticket
+     * if enough money has been input.
+     * 
+     * @author David J. Barnes and Michael Kölling
+     * @version 2016.02.29
+     * 
+     * Modified by Jakub Szupryczynski
+     * 08/11/2020
      */
-    public TicketMachine()
+    public class TicketMachine
     {
+       
+        // The amount of money entered by a customer so far.
+        private double balance;
+        // The total amount of money collected by this machine.
+        private double total;
+        // price for ticket to Aylesbury
+        private Ticket aylesburyTicket;
+        
+        private Ticket amershamTicket;
+        
+        private Ticket wycombeTicket;
+        
+        private Ticket userTicket;
+    
+        /**
+         * Create a machine that issues tickets of the given price.
+         */
+        public TicketMachine()
+        {
         aylesburyTicket = new Ticket("Aylesbury",2.00);
         
         amershamTicket = new Ticket("Amersham",3.00);
@@ -52,57 +52,51 @@ public class TicketMachine
         return balance;
     }
 
-    /**
-     * Receive an amount of money from a customer.
-     * Check that the amount is sensible.
-     * Display the balance
-     * Limit the customer to only certain amounts of money
-     * Display the amount inserted
-     */
-    public void insertMoney(double amount)
+     public void insert10p()
     {
-        if(amount == 0.10) 
-        {
-            balance = balance + amount;
-            System.out.println("You inserted" + amount + " cents.");
-            System.out.println("You now have" + balance + " cents.");
-        }
-        else if(amount == 0.20) 
-        {
-        }
-         else if(amount == 1.00) 
-        {
-            balance = balance + amount;
-            System.out.println("You inserted" + amount + " cents.");
-            System.out.println("You now have" + balance + " cents.");
-        }
-         else if(amount == 2.00) 
-        {
-            balance = balance + amount;
-            System.out.println("You inserted" + amount + " cents.");
-            System.out.println("You now have" + balance + " cents.");
-        }
-        else
-        {
-            System.out.println("Plase enter either 10p,20p,£1 or £2 rather than: " +
-                               amount);
-        }
-         
-            
-            
+        double amount = 0.10;
+        balance = balance + amount;
+        System.out.println("You inserted" + amount + " pounds.");
+        System.out.println("You now have" + balance + " pounds.");
     }
-
+    
     public void insert20p()
     {
         double amount = 0.20;
         balance = balance + amount;
-        System.out.println("You inserted" + amount + " cents.");
-        System.out.println("You now have" + balance + " cents.");
+        System.out.println("You inserted" + amount + " pounds.");
+        System.out.println("You now have" + balance + " pounds.");
+    }
+    
+     public void insert£1()
+    {
+        double amount = 1.00;
+        balance = balance + amount;
+        System.out.println("You inserted" + amount + " pounds.");
+        System.out.println("You now have" + balance + " pounds.");
+    }
+    
+     public void insert£2()
+    {
+        double amount = 2.00;
+        balance = balance + amount;
+        System.out.println("You inserted" + amount + " pounds.");
+        System.out.println("You now have" + balance + " pounds.");
     }
     
     public void selectAylesbury()
     {
         userTicket = aylesburyTicket;
+    }
+    
+     public void selectAmersham()
+    {
+        userTicket = amershamTicket;
+    }
+    
+     public void selectHighWycombe()
+    {
+        userTicket = wycombeTicket;
     }
     
     /**

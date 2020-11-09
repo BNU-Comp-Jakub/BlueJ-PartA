@@ -1,0 +1,62 @@
+TicketMachine ticketMa1 = new TicketMachine();
+ticketMa1.selectHighWycombe();
+ticketMa1.printTicket();
+You must insert at least: 3.3 more cents.
+ticketMa1.insert?2();
+You inserted2.0 pounds.
+You now have2.0 pounds.
+ticketMa1.insert?2();
+You inserted2.0 pounds.
+You now have4.0 pounds.
+ticketMa1.printTicket();
+##################
+# The BlueJ Line
+# 08/11/20
+# ticket: High Wycombe cost: 3.3 date: Mon Nov 09 04:00:59 CET 2020
+##################
+
+ticketMa1.getBalance()
+    returned double 0.7000000000000002
+ticketMa1.selectAmersham();
+ticketMa1.printTicket();
+You must insert at least: 2.3 more cents.
+ticketMa1.insert?2();
+You inserted2.0 pounds.
+You now have2.7 pounds.
+ticketMa1.insert20p();
+You inserted0.2 pounds.
+You now have2.9000000000000004 pounds.
+ticketMa1.insert10p();
+You inserted0.1 pounds.
+You now have3.0000000000000004 pounds.
+ticketMa1.getBalance()
+    returned double 3.0000000000000004
+ticketMa1.printTicket();
+##################
+# The BlueJ Line
+# 08/11/20
+# ticket: Amersham cost: 3.0 date: Mon Nov 09 04:00:59 CET 2020
+##################
+
+ticketMa1.getBalance()
+    returned double 4.440892098500626E-16
+ticketMa1.selectAylesbury();
+ticketMa1.printTicket();
+You must insert at least: 1.9999999999999996 more cents.
+ticketMa1.insert?2();
+You inserted2.0 pounds.
+You now have2.0000000000000004 pounds.
+ticketMa1.printTicket();
+##################
+# The BlueJ Line
+# 08/11/20
+# ticket: Aylesbury cost: 2.0 date: Mon Nov 09 04:00:59 CET 2020
+##################
+
+ticketMa1.getBalance()
+    returned double 4.440892098500626E-16
+ticketMa1.insert?1();
+You inserted1.0 pounds.
+You now have1.0000000000000004 pounds.
+ticketMa1.getBalance()
+    returned double 1.0000000000000004
