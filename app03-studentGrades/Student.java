@@ -24,8 +24,6 @@ public class Student
     public void addtocourse(Course course1)
     {
         programing = course1;
-      
-        
     }
     
     /**

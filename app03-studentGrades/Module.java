@@ -1,9 +1,9 @@
 import java.util.*;
 /**
- * Write a description of class Module here.
+ * This is a moudle wth a name it's code and a set precentage.
  *
- * @author (your name)
- * @version (a version number or a date)
+ * @author (Jakub Szupryczynski)
+ * @version (09/11/2020)
  */
 public class Module
 {
@@ -29,8 +29,7 @@ public class Module
      */
     public String getname()
     {
-        return modulename;
-        
+        return modulename;      
     }
     
      /**
@@ -38,8 +37,7 @@ public class Module
      */
     public String getcode()
     {
-        return modulecode;
-        
+        return modulecode;        
     }
     
     /**
@@ -48,7 +46,6 @@ public class Module
     public int getpercent()
     {
         return mark;
-        
     }
    
       /**
@@ -65,6 +62,11 @@ public class Module
     public void changeCode(String replacementCode)
     {
         modulecode = replacementCode;
+    }
+    
+    public void setPrecentage(int newMark)
+    {
+        mark = newMark;
     }
    
     public void print()

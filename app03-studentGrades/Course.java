@@ -1,7 +1,7 @@
 import java.util.*;
 
 /**
- * This is a class for the Course
+ * This is a class for the Course which contains 4 moudles
  *
  * @author (Jakub Szupryczynski)
  * @version (08/11/2020)
@@ -13,13 +13,13 @@ public class Course
     // Variable that represent the code number of the course
     public String codenumber;
    
-    private Module coding;
+    private Module module1;
     
-    private Module coding2;
+    private Module module2;
    
-    private Module coding3;
+    private Module module3;
        
-    private Module coding4;
+    private Module module4;
     
     int precentage;
      /**
@@ -27,9 +27,7 @@ public class Course
      */
     public void addamodule(Module module1)
     {
-        coding = module1;
-      
-        
+        this.module1 = module1;
     }
     
       /**
@@ -37,9 +35,7 @@ public class Course
      */
     public void addamodule2(Module module2)
     {
-        coding2 = module2;
-        
-        
+        this.module2 = module2;
     }
     
     /**
@@ -47,9 +43,7 @@ public class Course
      */
     public void addamodule3(Module module3)
     {
-        coding3 = module3;
-        
-        
+        this.module3 = module3;
     }
     
     /**
@@ -57,9 +51,7 @@ public class Course
      */
     public void addamodule4(Module module4)
     {
-        coding4 = module4;
-        
-        
+        this.module4 = module4;
     }
     
     /**
@@ -67,13 +59,8 @@ public class Course
      */
     public Course(String course, String code)
     {
-        // initialise instance variables
         coursename = course;
         codenumber = code;
-        
-        
-        
-        
     }
     
     
@@ -116,31 +103,26 @@ public class Course
     public void print()
     {
         System.out.println("Course Name:" + coursename +" Course Code:" + codenumber);
-        System.out.println("1st Module's name is " + coding.modulename);
-        System.out.println("1st Module's code is " + coding.modulecode);
-        System.out.println("2nd Module's name is " + coding2.modulename);
-        System.out.println("2nd Module's code is " + coding2.modulecode);
-        System.out.println("3rd Module's name is " + coding3.modulename);
-        System.out.println("3rd Module's code is " + coding3.modulecode);
-        System.out.println("4th Module's name is " + coding4.modulename);
-        System.out.println("4th Module's code is " + coding4.modulecode);
+        
+        module1.print();
+        module2.print();
+        module3.print();
+        module4.print();
     }
     
     public void calculatefinalmark()
     {
         //set the precentage = to the 4 module mark and divided by 4.
-        this.precentage = coding.mark + coding2.mark + coding3.mark + coding4.mark;
-        return precentage;
+        this.precentage = (module1.mark + module2.mark + 
+                          module3.mark + module4.mark)/4;
+        calculateGrade();
     }
     
     /**
-     *Gets the precentages and turns them into grades
+     * Gets the precentages and turns them into grades
      */
-    public void grade(int precentage)
-    
+    public void calculateGrade()
     {
-       
-        
         if(precentage >= 0 && precentage <= 39)
         {
          System.out.println("F");
@@ -149,28 +131,22 @@ public class Course
         {
          System.out.println("D");
         }
-        
         else if(precentage >= 50 && precentage <= 59)
         {
          System.out.println("C");
         }
-        
         else if(precentage >= 60 && precentage <= 69)
         {
          System.out.println("B");
         }
-        
         else if(precentage >= 70 && precentage <= 100)
         {
          System.out.println("A");
         }
-        
         else
         {
          System.out.println("Please enter a correct precentage");
         }
     }
-    
-    
 }
 
