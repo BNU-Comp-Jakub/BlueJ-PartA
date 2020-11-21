@@ -11,22 +11,26 @@ public class StockManager
 {
     // A list of the products.
     private ArrayList<Product> stock;
+    
+    private int stockNumber;
 
     /**
      * Initialise the stock manager.
      */
     public StockManager()
     {
-        stock = new ArrayList<>();
+        stock = new ArrayList<Product>();
+        stockNumber = 1;
     }
 
     /**
      * Add a product to the list.
      * @param item The item to be added.
      */
-    public void addProduct(Product item)
+    public void addProduct(String item)
     {
-        stock.add(item);
+        stock.add(new Product(stockNumber,item));
+        stockNumber++;
     }
     
     /**
@@ -66,5 +70,6 @@ public class StockManager
      */
     public void printProductDetails()
     {
+        Product.getName();
     }
 }
