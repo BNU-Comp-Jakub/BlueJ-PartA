@@ -37,8 +37,14 @@ public class StockManager
      */
     public void delivery(int id, int amount)
     {
+    for(int N=0; N<stock.size(); N++) 
+        {
+        if(id == stock.get(N).getID())
+            {
+                    
+            }
+        }        
     }
-    
     /**
      * Try to find a product in the stock with the given id.
      * @return The identified product, or null if there is none
@@ -63,17 +69,11 @@ public class StockManager
      * @param id The ID of the product.
      * @return The quantity of the given product in stock.
      */
-    public Product numberInStock(int id)
+    public int numberInStock(int id)
     {
-    for(int N=0; N<stock.size(); N++) 
-        {
-        if(id == stock.get(N).getID())
-            {
-                return stock.get(N.getQuantity);
-            }
-        }
-        return null;
+        return 0;
     }
+
     /**
      * Print details of all the products.
      */
