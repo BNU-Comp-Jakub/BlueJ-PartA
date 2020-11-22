@@ -42,7 +42,6 @@ public class StockManager
         if(id == stock.get(N).getID())
             {
                  stock.get(N).getQuantity();
-                 stock.get(N).getQuantity(stock.quantity += amount);
             }
         }        
     }
@@ -89,5 +88,6 @@ public class StockManager
         stock.get(id).getName();
         System.out.println(stock.get(id).getName());
         System.out.println(stock.get(id).getID());
+        System.out.println(stock.get(id).getQuantity());
     }
 }
