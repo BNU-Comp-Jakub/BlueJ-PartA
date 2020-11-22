@@ -12,25 +12,21 @@ public class StockManager
     // A list of the products.
     private ArrayList<Product> stock;
     
-    private int stockNumber;
-
     /**
      * Initialise the stock manager.
      */
     public StockManager()
     {
         stock = new ArrayList<Product>();
-        stockNumber = 1;
     }
 
     /**
      * Add a product to the list.
      * @param item The item to be added.
      */
-    public void addProduct(String item)
+    public void addProduct(Product item)
     {
-        stock.add(new Product(stockNumber,item));
-        stockNumber++;
+        stock.add(item);
     }
     
     /**
@@ -49,10 +45,17 @@ public class StockManager
      *         with a matching ID.
      */
     public Product findProduct(int id)
+    
     {
+    for(int N=0; N<stock.size(); N++) 
+        {
+        if(id == stock.get(N).getID())
+            {
+                return stock.get(N);
+            }
+        }
         return null;
     }
-    
     /**
      * Locate a product with the given ID, and return how
      * many of this item are in stock. If the ID does not
@@ -60,16 +63,24 @@ public class StockManager
      * @param id The ID of the product.
      * @return The quantity of the given product in stock.
      */
-    public int numberInStock(int id)
+    public Product numberInStock(int id)
     {
-        return 0;
+    for(int N=0; N<stock.size(); N++) 
+        {
+        if(id == stock.get(N).getID())
+            {
+                return stock.get(N.getQuantity);
+            }
+        }
+        return null;
     }
-
     /**
      * Print details of all the products.
      */
-    public void printProductDetails()
+    public void printProductDetails(int id)
     {
-        Product.getName();
+        stock.get(id).getName();
+        System.out.println(stock.get(id).getName());
+        System.out.println(stock.get(id).getID());
     }
 }
