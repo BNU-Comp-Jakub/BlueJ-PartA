@@ -41,7 +41,8 @@ public class StockManager
         {
         if(id == stock.get(N).getID())
             {
-                    
+                 stock.get(N).getQuantity();
+                 stock.get(N).getQuantity(stock.quantity += amount);
             }
         }        
     }
@@ -71,9 +72,15 @@ public class StockManager
      */
     public int numberInStock(int id)
     {
+    for(int N=0; N<stock.size(); N++) 
+        {
+        if(id == stock.get(N).getID())
+            {
+                return stock.get(N).getQuantity();
+            }
+        }
         return 0;
     }
-
     /**
      * Print details of all the products.
      */
