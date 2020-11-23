@@ -1,6 +1,9 @@
 /**
  * Model some details of a product sold by a company.
  * 
+ * @author Jakub Szupryczynski
+ * 23/11/2020
+ * 
  * @author David J. Barnes and Michael Kölling.
  * @version 2016.02.29
  */
@@ -42,6 +45,9 @@ public class Product
         return name;
     }
     
+    /**
+     * Sets the products name to a new name.
+     */
     public void setName(String typeName)
     {
         name = typeName;
@@ -83,7 +89,7 @@ public class Product
     }
 
     /**
-     * Sell one of these products.
+     * Sell an amount of these products.
      * An error is reported if there appears to be no stock.
      */
     public void sellProduct(int amount)

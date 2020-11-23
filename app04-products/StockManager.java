@@ -4,8 +4,8 @@ import java.util.ArrayList;
  * Manage the stock in a business.
  * The stock is described by zero or more Products.
  * 
- * @author (your name) 
- * @version (a version number or a date)
+ * @author (Jakub Szupryczynski) 
+ * @version (23/11/2020)
  */
 public class StockManager
 {
@@ -85,11 +85,9 @@ public class StockManager
     }
     
     /**
-     * Locate a product with the given ID, and return how
-     * many of this item are in stock. If the ID does not
-     * match any product, return zero.
+     * Locate a product with the given ID, and change its name.
      * @param id The ID of the product.
-     * @return The quantity of the given product in stock.
+     * @param newName The new name of the product.
      */
     public void changeNameProduct(int id, String newName)
     {
@@ -103,11 +101,9 @@ public class StockManager
     }
     
     /**
-     * Locate a product with the given ID, and return how
-     * many of this item are in stock. If the ID does not
-     * match any product, return zero.
+     * Locate a product with the given ID.
+     * Remove that product.
      * @param id The ID of the product.
-     * @return The quantity of the given product in stock.
      */
     public void removeProduct(int id)
     {
@@ -120,6 +116,10 @@ public class StockManager
         }
     }
     
+    /**
+     * Locate all products in stock.
+     * Display the details of the products.
+     */
     public void printAllProducts()
     {
         for(int N=0; N<stock.size(); N++)
@@ -128,6 +128,10 @@ public class StockManager
         }
     }
     
+    /**
+     * Locate products that contain the string typed in.
+     * @param String find
+     */
     public void findInProducts(String find)
     {
         for(int N=0; N<stock.size(); N++)
@@ -139,6 +143,9 @@ public class StockManager
         }
     }
     
+    /**
+     * Locate products that are low in quantity.
+     */
     public void findLowProducts()
     {
         for(int N=0; N<stock.size(); N++)
@@ -150,6 +157,11 @@ public class StockManager
         }
     }
     
+    /**
+     * Locate product by its id.
+     * reduce that product by a given amount
+     * @param amount and id
+     */
     public void sellProduct(int amount, int id)
     {
         for(int N=0; N<stock.size(); N++)

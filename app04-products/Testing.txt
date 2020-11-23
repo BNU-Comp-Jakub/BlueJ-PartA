@@ -1,0 +1,62 @@
+StockDemo stockDem2 = new StockDemo();
+StockManager stockMan2 = new StockManager();
+Product product1 = new Product(1, "apple");
+product1.getID()
+    returned int 1
+product1.getName()
+    returned String "apple"
+product1.getQuantity()
+    returned int 0
+product1.increaseQuantity(1);
+product1.getQuantity()
+    returned int 1
+product1.sellProduct(1);
+product1.getQuantity()
+    returned int 0
+product1.setName("GreenApple");
+product1.toString()
+    returned String "1: GreenApple stock level: 0"
+stockMan2.addProduct(product1);
+stockMan2.changeNameProduct(1, "RedApple");
+stockMan2.delivery(1, 7);
+stockMan2.findInProducts("Red");
+RedApple
+1
+7
+stockMan2.findProduct(1)
+    returned Object <object reference>
+stockMan2.findLowProducts();
+stockMan2.numberInStock(1)
+    returned int 7
+stockMan2.sellProduct(3, 1);
+stockMan2.numberInStock(1)
+    returned int 4
+stockMan2.findLowProducts();
+RedApple
+1
+4
+stockMan2.printAllProducts();
+RedApple
+1
+4
+stockMan2.removeProduct(1);
+stockMan2.printAllProducts();
+Product product2 = new Product(2, "Bannana");
+stockMan2.addProduct(product2);
+stockMan2.addProduct(product1);
+stockMan2.printAllProducts();
+Bannana
+2
+0
+RedApple
+1
+4
+stockMan2.delivery(2, 3);
+stockMan2.findProduct(2)
+    returned Object <object reference>
+stockMan2.printProductDetails(2);
+    Exception occurred.
+stockMan2.printProductDetails(1);
+RedApple
+1
+4

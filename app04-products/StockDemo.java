@@ -3,6 +3,9 @@
  * The demonstration becomes properly functional as
  * the StockManager class is completed.
  * 
+ * @Author Jakub Szupryczynski
+ * @version 23/11/2020
+ * 
  * @author David J. Barnes and Michael Kölling.
  * @version 2016.02.29
  */
