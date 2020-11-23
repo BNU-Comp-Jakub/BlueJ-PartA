@@ -41,11 +41,12 @@ public class StockManager
         {
         if(id == stock.get(N).getID())
             {
-                 stock.get(N).getQuantity();
+                 stock.get(N).increaseQuantity(amount);
                 
             }
         }        
     }
+    
     /**
      * Try to find a product in the stock with the given id.
      * @return The identified product, or null if there is none
@@ -63,6 +64,7 @@ public class StockManager
         }
         return null;
     }
+    
     /**
      * Locate a product with the given ID, and return how
      * many of this item are in stock. If the ID does not
@@ -81,13 +83,91 @@ public class StockManager
         }
         return 0;
     }
+    
+    /**
+     * Locate a product with the given ID, and return how
+     * many of this item are in stock. If the ID does not
+     * match any product, return zero.
+     * @param id The ID of the product.
+     * @return The quantity of the given product in stock.
+     */
+    public void changeNameProduct(int id, String newName)
+    {
+    for(int N=0; N<stock.size(); N++) 
+        {
+        if(id == stock.get(N).getID())
+            {
+                stock.get(N).setName(newName);
+            }
+        }
+    }
+    
+    /**
+     * Locate a product with the given ID, and return how
+     * many of this item are in stock. If the ID does not
+     * match any product, return zero.
+     * @param id The ID of the product.
+     * @return The quantity of the given product in stock.
+     */
+    public void removeProduct(int id)
+    {
+    for(int N=0; N<stock.size(); N++) 
+        {
+        if(id == stock.get(N).getID())
+            {
+                stock.remove(N);
+            }
+        }
+    }
+    
+    public void printAllProducts()
+    {
+        for(int N=0; N<stock.size(); N++)
+        {
+            printProductDetails(N);
+        }
+    }
+    
+    public void findInProducts(String find)
+    {
+        for(int N=0; N<stock.size(); N++)
+        {
+            if(stock.get(N).getName().contains(find))
+            {
+                printProductDetails(N);
+            }
+        }
+    }
+    
+    public void findLowProducts()
+    {
+        for(int N=0; N<stock.size(); N++)
+        {
+            if(stock.get(N).getQuantity()<5)
+            {
+                printProductDetails(N);
+            }
+        }
+    }
+    
+    public void sellProduct(int amount, int id)
+    {
+        for(int N=0; N<stock.size(); N++)
+        {
+            if(id == stock.get(N).getID())
+            {
+               stock.get(N).sellProduct(amount);   
+            }    
+        }
+    }
+    
     /**
      * Print details of all the products.
      */
     public void printProductDetails(int id)
     {
-        stock.get(id).getName();
         System.out.println(stock.get(id).getName());
         System.out.println(stock.get(id).getID());
+        System.out.println(stock.get(id).getQuantity());
     }
 }

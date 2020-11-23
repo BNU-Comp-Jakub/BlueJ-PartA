@@ -41,7 +41,12 @@ public class Product
     {
         return name;
     }
-
+    
+    public void setName(String typeName)
+    {
+        name = typeName;
+    }
+    
     /**
      * @return The quantity in stock.
      */
@@ -81,11 +86,11 @@ public class Product
      * Sell one of these products.
      * An error is reported if there appears to be no stock.
      */
-    public void sellOne()
+    public void sellProduct(int amount)
     {
-        if(quantity > 0) 
+        if(quantity - amount >= 0) 
         {
-            quantity--;
+            quantity = quantity - amount;
         }
         else 
         {

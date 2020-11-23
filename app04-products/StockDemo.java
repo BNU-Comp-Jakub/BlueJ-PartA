@@ -64,7 +64,7 @@ public class StockDemo
         if(product != null) 
         {
             showDetails(id);
-            product.sellOne();
+            product.sellProduct(4);
             showDetails(id);
         }
     }
