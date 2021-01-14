@@ -1,31 +1,32 @@
-
+import java.util.ArrayList;
 /**
  * This app provides a user interface to the
  * stock manager so that users can add, edit,
  * print and remove stock products
  *
- * @author Student Name
+ * @author Jakub Szupryczynski
  * @version 0.1
  */
 public class StockApp
 {
     // Use to get user input
     private InputReader input;
-    
+    private StockManager manager;
+    private ArrayList<Product> stock;
     /**
      * Constructor for objects of class StockApp
      */
     public StockApp()
     {
         input = new InputReader();
+        manager = new StockManager();
     }
 
     /**
      * 
      */
     public void run()
-    {
-        printHeading();
+    {     
         getMenuChoice();
     }
     
@@ -45,8 +46,12 @@ public class StockApp
             finished = true;
         }
     }
-    
    
+    private void getInput(String input)
+    {
+        if(input == "Add"())
+    }
+    
     /**
      * Print out a menu of operation choices
      */
@@ -67,7 +72,7 @@ public class StockApp
     {
         System.out.println("******************************");
         System.out.println(" Stock Management Application ");
-        System.out.println("    App05: by Student Name");
+        System.out.println("    App05: by Jakub Szupryczynski");
         System.out.println("******************************");
     }
 }
