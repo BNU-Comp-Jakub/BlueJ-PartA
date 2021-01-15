@@ -12,6 +12,11 @@ public class StockManager
     // A list of the products.
     private ArrayList<Product> stock;
     
+    public void addNewProduct(int id,String name)
+    {
+        stock.add(new Product(id, name));
+    }
+    
     /**
      * Initialise the stock manager.
      */
@@ -124,7 +129,9 @@ public class StockManager
     {
         for(int N=0; N<stock.size(); N++)
         {
-            printProductDetails(N);
+             System.out.println(stock.get(N).getName());
+             System.out.println(stock.get(N).getID());
+             System.out.println(stock.get(N).getQuantity());
         }
     }
     
@@ -138,7 +145,7 @@ public class StockManager
         {
             if(stock.get(N).getName().contains(find))
             {
-                printProductDetails(N);
+                printProductDetails(stock.get(N).getID());
             }
         }
     }
@@ -152,7 +159,7 @@ public class StockManager
         {
             if(stock.get(N).getQuantity()<5)
             {
-                printProductDetails(N);
+                printProductDetails(stock.get(N).getID());
             }
         }
     }
@@ -162,7 +169,7 @@ public class StockManager
      * reduce that product by a given amount
      * @param amount and id
      */
-    public void sellProduct(int amount, int id)
+    public void sellProduct(int id, int amount)
     {
         for(int N=0; N<stock.size(); N++)
         {
@@ -173,13 +180,31 @@ public class StockManager
         }
     }
     
+    public void reStock()
+    {
+        for(int N=0; N<stock.size(); N++)
+        {
+            if(stock.get(N).getQuantity() <= 5)
+            {
+              delivery(stock.get(N).getID(), 5);
+            }
+        }
+        
+    }
+    
     /**
      * Print details of all the products.
      */
     public void printProductDetails(int id)
     {
-        System.out.println(stock.get(id).getName());
-        System.out.println(stock.get(id).getID());
-        System.out.println(stock.get(id).getQuantity());
+        for(int N=0; N<stock.size(); N++)
+        {
+            if(id == stock.get(N).getID())
+            {
+                System.out.println(stock.get(N).getName());
+                System.out.println(stock.get(N).getID());
+                System.out.println(stock.get(N).getQuantity());
+            }
+        }
     }
 }

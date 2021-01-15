@@ -12,7 +12,6 @@ public class StockApp
     // Use to get user input
     private InputReader input;
     private StockManager manager;
-    private ArrayList<Product> stock;
     /**
      * Constructor for objects of class StockApp
      */
@@ -27,6 +26,7 @@ public class StockApp
      */
     public void run()
     {     
+        printHeading();
         getMenuChoice();
     }
     
@@ -39,17 +39,68 @@ public class StockApp
         
         while(!finished)
         {
-            printHeading();
             printMenuChoices();
            
             String choice = input.getInput();
+           if(choice.equals("Add"))
+           {
+            String name;
+            int id;
+            name = input.getInput();
+            id = input.getInt();
+            manager.addNewProduct(id,name);
+           }
+           else if(choice.equals("PrintAll"))
+           {
+             manager.printAllProducts();
+           }
+           
+           else if(choice.equals("Quit"))
+           {
             finished = true;
+           }
+           
+           else if(choice.equals("Remove"))
+           {
+               int id = input.getInt();
+               manager.removeProduct(id);   
+           }
+           
+           else if(choice.equals("Deliver"))
+           {
+            int id = input.getInt();
+            int amount = input.getInt();
+            manager.delivery(id,amount);
+           }
+           
+           else if(choice.equals("Sell"))
+           {
+            int id = input.getInt();
+            int amount = input.getInt();
+            manager.sellProduct(id,amount);
+           }
+           
+           else if(choice.equals("Search"))
+           {
+            String find = input.getInput();
+            manager.findInProducts(find);
+           }
+           
+           else if(choice.equals("LowStock"))
+           {
+            manager.findLowProducts();
+           }
+           
+           else if(choice.equals("ReStock"))
+           {
+            manager.reStock();
+           }
+           
+           else
+           {
+            System.out.println("Not a valid command");
+           }
         }
-    }
-   
-    private void getInput(String input)
-    {
-        if(input == "Add"())
     }
     
     /**
@@ -60,6 +111,11 @@ public class StockApp
         System.out.println();
         System.out.println("    Add:        Add a new product");
         System.out.println("    Remove:     Remove an old product");
+        System.out.println("    Deliver:    Deliver an old product");
+        System.out.println("    Sell:       Sell an old product");
+        System.out.println("    Search:     Search an old product");
+        System.out.println("    LowStock:   Show low amount products");
+        System.out.println("    ReStock:   Show low amount products");
         System.out.println("    PrintAll:   Print all products");
         System.out.println("    Quit:       Quit the program");
         System.out.println();        
