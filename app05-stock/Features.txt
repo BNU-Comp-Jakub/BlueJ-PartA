@@ -1,0 +1,5 @@
+1 Track sold Items would be important to determine popular items
+2 Print most popular to find which items sell the most
+3 Print Least popular to find the items that may need improvment
+4 Item categories should be made to search in categories 
+5 Report Item would track Items that arrived broken without counting them as sold. 
