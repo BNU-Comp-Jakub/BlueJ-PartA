@@ -9,9 +9,13 @@ import java.util.ArrayList;
  */
 public class StockManager
 {
-    // A list of the products.
+    /**
+    * Creates a array list.
+    */
     private ArrayList<Product> stock;
-    
+    /**
+    * Adds a product to the list
+    */
     public void addNewProduct(int id,String name)
     {
         stock.add(new Product(id, name));
@@ -180,6 +184,9 @@ public class StockManager
         }
     }
     
+    /**
+    * Restocks the products with low numbers
+    */
     public void reStock()
     {
         for(int N=0; N<stock.size(); N++)

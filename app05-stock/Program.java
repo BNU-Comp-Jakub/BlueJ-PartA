@@ -3,10 +3,13 @@
  * Write a description of class Program here.
  *
  * @author (Jakub Szupryczynski)
- * @version (a version number or a date)
+ * @version (16/01/2021)
  */
 public class Program
 {
+    /**
+    *Storing variables
+    */
     private static StockApp app;
 
     /**

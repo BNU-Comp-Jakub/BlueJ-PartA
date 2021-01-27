@@ -7,9 +7,15 @@ import java.util.Scanner;
  * 
  * @author     Michael Kölling and David J. Barnes
  * @version    0.1 (2016.02.29)
+ * 
+ * @editor  Jakub Szupryczynski
+ * @version 16/01/21
  */
 public class InputReader
 {
+    /**
+    *Storing Variables
+    */
     private Scanner reader;
 
     /**
@@ -34,6 +40,9 @@ public class InputReader
         return inputLine;
     }
     
+   /**
+    * Returns A int typed by the user.
+    */
     public int getInt()
     {
       System.out.print("> ");         // print prompt

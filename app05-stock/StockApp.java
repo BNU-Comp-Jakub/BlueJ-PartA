@@ -3,13 +3,14 @@ import java.util.ArrayList;
  * This app provides a user interface to the
  * stock manager so that users can add, edit,
  * print and remove stock products
- *
  * @author Jakub Szupryczynski
- * @version 0.1
+ * @version 16/01/21
  */
 public class StockApp
 {
-    // Use to get user input
+    /**
+    * Storing Variables
+    */
     private InputReader input;
     private StockManager manager;
     /**
@@ -22,7 +23,7 @@ public class StockApp
     }
 
     /**
-     * 
+     * Used to run the game
      */
     public void run()
     {     
@@ -31,7 +32,7 @@ public class StockApp
     }
     
     /**
-     * 
+     * Creates Working Menu
      */
     public void getMenuChoice()
     {
