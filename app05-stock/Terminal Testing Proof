@@ -1,0 +1,199 @@
+    Search:     Search an old product
+    LowStock:   Show low amount products
+    ReStock:   Show low amount products
+    PrintAll:   Print all products
+    Quit:       Quit the program
+
+> Search
+> Apple
+Apple
+1
+0
+Apple Pen
+5
+0
+
+    Add:        Add a new product
+    Remove:     Remove an old product
+    Deliver:    Deliver an old product
+    Sell:       Sell an old product
+    Search:     Search an old product
+    LowStock:   Show low amount products
+    ReStock:   Show low amount products
+    PrintAll:   Print all products
+    Quit:       Quit the program
+
+> LowStock
+Apple
+1
+0
+pineapple
+2
+0
+pen
+3
+0
+Pineapple pen
+4
+4
+Apple Pen
+5
+0
+New Product
+103
+0
+
+    Add:        Add a new product
+    Remove:     Remove an old product
+    Deliver:    Deliver an old product
+    Sell:       Sell an old product
+    Search:     Search an old product
+    LowStock:   Show low amount products
+    ReStock:   Show low amount products
+    PrintAll:   Print all products
+    Quit:       Quit the program
+
+> Deliver
+> 4
+> 22
+
+    Add:        Add a new product
+    Remove:     Remove an old product
+    Deliver:    Deliver an old product
+    Sell:       Sell an old product
+    Search:     Search an old product
+    LowStock:   Show low amount products
+    ReStock:   Show low amount products
+    PrintAll:   Print all products
+    Quit:       Quit the program
+
+> Not a valid command
+
+    Add:        Add a new product
+    Remove:     Remove an old product
+    Deliver:    Deliver an old product
+    Sell:       Sell an old product
+    Search:     Search an old product
+    LowStock:   Show low amount products
+    ReStock:   Show low amount products
+    PrintAll:   Print all products
+    Quit:       Quit the program
+
+> PrintAll
+Apple
+1
+0
+pineapple
+2
+0
+pen
+3
+0
+Pineapple pen
+4
+26
+Apple Pen
+5
+0
+New Product
+103
+0
+
+    Add:        Add a new product
+    Remove:     Remove an old product
+    Deliver:    Deliver an old product
+    Sell:       Sell an old product
+    Search:     Search an old product
+    LowStock:   Show low amount products
+    ReStock:   Show low amount products
+    PrintAll:   Print all products
+    Quit:       Quit the program
+
+> LowStock
+Apple
+1
+0
+pineapple
+2
+0
+pen
+3
+0
+Apple Pen
+5
+0
+New Product
+103
+0
+
+    Add:        Add a new product
+    Remove:     Remove an old product
+    Deliver:    Deliver an old product
+    Sell:       Sell an old product
+    Search:     Search an old product
+    LowStock:   Show low amount products
+    ReStock:   Show low amount products
+    PrintAll:   Print all products
+    Quit:       Quit the program
+
+> ReStock
+
+    Add:        Add a new product
+    Remove:     Remove an old product
+    Deliver:    Deliver an old product
+    Sell:       Sell an old product
+    Search:     Search an old product
+    LowStock:   Show low amount products
+    ReStock:   Show low amount products
+    PrintAll:   Print all products
+    Quit:       Quit the program
+
+> PrintAll
+Apple
+1
+5
+pineapple
+2
+5
+pen
+3
+5
+Pineapple pen
+4
+26
+Apple Pen
+5
+5
+New Product
+103
+5
+
+    Add:        Add a new product
+    Remove:     Remove an old product
+    Deliver:    Deliver an old product
+    Sell:       Sell an old product
+    Search:     Search an old product
+    LowStock:   Show low amount products
+    ReStock:   Show low amount products
+    PrintAll:   Print all products
+    Quit:       Quit the program
+
+> Quit
+StockApp stockApp1 = new StockApp();
+stockApp1.run();
+******************************
+ Stock Management Application 
+    App05: by Jakub Szupryczynski
+******************************
+
+    Add:        Add a new product
+    Remove:     Remove an old product
+    Deliver:    Deliver an old product
+    Sell:       Sell an old product
+    Search:     Search an old product
+    LowStock:   Show low amount products
+    ReStock:   Restock low amount products
+    PrintAll:   Print all products
+    Quit:       Quit the program
+
+> Quit

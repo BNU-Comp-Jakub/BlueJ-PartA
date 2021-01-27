@@ -116,7 +116,7 @@ public class StockApp
         System.out.println("    Sell:       Sell an old product");
         System.out.println("    Search:     Search an old product");
         System.out.println("    LowStock:   Show low amount products");
-        System.out.println("    ReStock:   Show low amount products");
+        System.out.println("    ReStock:   Restock low amount products");
         System.out.println("    PrintAll:   Print all products");
         System.out.println("    Quit:       Quit the program");
         System.out.println();        
